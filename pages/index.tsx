@@ -4,6 +4,8 @@ import { useEffect, useMemo, useState } from 'react';
 import { motion } from 'framer-motion';
 
 import getScrollAnimation from '@/src/utils/getScrollAnimation';
+import CollapseDefault from '@/src/components/material-tailwind/toggle';
+import { Button } from '@material-tailwind/react';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,39 +18,37 @@ export default function Home() {
       className="max-w-screen-xl mt-24 px-8 xl:px-16 mx-auto"
       id="about"
     >
-      <motion.div
-      initial="offscreen"
-      whileInView="onscreen"
-      viewport={{ once: true, amount: 0.8 }}>
-          <motion.div
-            className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
-            variants={scrollAnimation}>
-            <div className=" flex flex-col justify-center items-start row-start-2 sm:row-start-1">
-              <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
-               Apprenez plus rapidement avec <strong>QGDev</strong>.
-              </h1>
-              <p className="text-black-500 mt-4 mb-6">
-              {"Êtes-vous prêt à ouvrir les portes d'un monde infini de possibilités ? "}<br/>
-              {"Apprendre la programmation en ligne est bien plus qu'une simple compétence technique. C'est une opportunité de développer votre créativité, de résoudre des problèmes complexes et de façonner le futur numérique."}
-              </p>
-              <button  className={"py-1 lg:py-4 px-12 lg:px-16 text-[#fff] font-semibold rounded-lg bg-[#09203e] hover:shadow-orange-md transition-all outline-none "}>
-                  Commencer
-              </button>
-            </div>
-            <div className="flex w-full">
-              <motion.div className="h-full w-full" variants={scrollAnimation}>
-                <img
-                  className='responsive'
-                  src="./assets/Illustration2.png"
-                  alt="VPN Illustrasi"
-                  width={612}
-                  height={383}
-                />
-              </motion.div>
-            </div>
-            </motion.div>
-          </motion.div>
+   <motion.div
+  initial="offscreen"
+  whileInView="onscreen"
+  viewport={{ once: true, amount: 0.8 }}
+>
+  <motion.div
+    className="grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
    
+  >
+    <div className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
+      <h1 className="text-3xl lg:text-4xl xl:text-5xl font-medium text-black-600 leading-normal">
+        Apprenez plus rapidement avec <strong>QGDev</strong>.
+      </h1>
+      <p className="text-black-500 mt-4 mb-6">
+       {"Êtes-vous prêt à ouvrir les portes d'un monde infini de possibilités ?"} 
+        <br />
+        {"Apprendre la programmation en ligne est bien plus qu'une simple compétence technique. C'est une opportunité de développer votre créativité, de résoudre des problèmes complexes et de façonner le futur numérique."}
+      </p>
+      <Button>Poursuivre</Button>
+    </div>
+    <div className="flex w-full">
+      <motion.div className="h-full w-full flex items-center">
+        <img
+          className="responsive max-h-96 mx-auto"
+          src="./assets/Illustration2.png"
+          alt="VPN Illustrasi"
+        />
+      </motion.div>
+    </div>
+  </motion.div>
+</motion.div>
     </div>
       <section className="text-gray-700 body-font">
         <div className="container px-5 py-24 mx-auto">
@@ -80,7 +80,7 @@ export default function Home() {
                 <img className="lg:h-48 md:h-36 w-full object-cover object-center" src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80" alt="blog"/>
                 <div className="p-6">
                   <h2 className="tracking-widest text-xs title-font font-medium text-gray-500 mb-1">Votre plateforme</h2>
-                  <h1 className="title-font text-lg font-medium text-[#fff] mb-3">QGDev</h1>
+                  <h1 className="title-font text-lg font-medium  mb-3">QGDev</h1>
                   <p className="leading-relaxed mb-3">Bientôt disponible.</p>
                   <div className="flex items-center flex-wrap ">
                     {/* <a className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">Learn More
