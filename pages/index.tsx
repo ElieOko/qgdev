@@ -9,23 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const scrollAnimation = useMemo(() => getScrollAnimation(), []);
-  const listUser = [
-    {
-      name: "Users",
-      number: "390",
-      icon: "/assets/Icon/heroicons_sm-user.svg",
-    },
-    {
-      name: "Locations",
-      number: "20",
-      icon: "/assets/Icon/gridicons_location.svg",
-    },
-    {
-      name: "Server",
-      number: "50",
-      icon: "/assets/Icon/bx_bxs-server.svg",
-    },
-  ]
+
   return (
     <>
         <div
@@ -44,9 +28,8 @@ export default function Home() {
                Apprenez plus rapidement avec <strong>QGDev</strong>.
               </h1>
               <p className="text-black-500 mt-4 mb-6">
-              Êtes-vous prêt à ouvrir les portes d'un monde infini de possibilités ? <br/>
-              Apprendre la programmation en ligne est bien plus qu'une simple compétence technique.
-               C'est une opportunité de développer votre créativité, de résoudre des problèmes complexes et de façonner le futur numérique.
+              {"Êtes-vous prêt à ouvrir les portes d'un monde infini de possibilités ? "}<br/>
+              {"Apprendre la programmation en ligne est bien plus qu'une simple compétence technique. C'est une opportunité de développer votre créativité, de résoudre des problèmes complexes et de façonner le futur numérique."}
               </p>
               <button  className={"py-1 lg:py-4 px-12 lg:px-16 text-[#fff] font-semibold rounded-lg bg-[#09203e] hover:shadow-orange-md transition-all outline-none "}>
                   Commencer
